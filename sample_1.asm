@@ -6,5 +6,5 @@ main:
     ori     $t1, $0, 0x3
     addu    $t2, $t0, $t1
 
-    li	$v0,10		# Code for syscall: exit
+    li	$v0, 10		# Code for syscall: exit
 	syscall
