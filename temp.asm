@@ -2,11 +2,9 @@
     .globl main
     
 main:
-    # Ask the user for the starting number and store it in v0
     li  $v0, 5
     syscall
 
-    # Similar to sample_8, you store the number some where else to allow v0 to use for command codes
     move $t0, $v0
     li  $t1, 0
     li  $t2, 0
