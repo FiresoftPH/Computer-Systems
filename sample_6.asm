@@ -1,14 +1,16 @@
         .data
-# Store a string inside the memory
 str:    .asciiz "Computer Systems"
+name:   .asciiz "Pattarapark"
 
         .text
         .globl main
 main:
-    # You can just use "4" in load immediate
+    # Code number four is for printing the string from the register $a0.
+    # The code must load to the register $v0
     li  $v0, 4
-    # loads the address of the string to a0
     la  $a0, str
+    # Pass the instruction to the OS
     syscall
 
-main:
+    la  $a0, name
+    syscall
