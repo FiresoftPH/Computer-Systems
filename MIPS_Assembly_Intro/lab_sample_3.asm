@@ -3,13 +3,16 @@
     
 main:
     # Ask the user for the starting number and store it in v0
-    li  $v0, 5
+    li      $v0, 5
     syscall
 
     # Similar to sample_8, you store the number some where else to allow v0 to use for command codes.
-    move $t0, $v0
-    li  $t1, 0
-    li  $t2, 0
+    move    $t0, $v0
+    # Without the pseudo instruction, you can use:
+    # andi    $t0, $v0, -1
+    # ori     $t0, $v0, 0
+    li      $t1, 0
+    li      $t2, 0
 
 loop:
     addi	$t1, $t1, 1			# $t1 = $t1 + 1
@@ -22,4 +25,3 @@ done:
     # move    $a0, $t1
     move    $a0, $t2
     syscall
-    

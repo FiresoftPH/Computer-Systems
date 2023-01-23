@@ -1,2 +1,3 @@
         .data
-msg_1:  .asciiz "Enter your number here            
+msg_1:  .asciiz "Enter your number here: "
+    
