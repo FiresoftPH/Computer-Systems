@@ -1,5 +1,5 @@
         .data
-str:    .asciiz "Hello World" # Array of ASCIIZ Characters
+str:    .asciiz "Hello World\n" # Array of ASCIIZ Characters
         .text
         .globl main
 main:
