@@ -2,6 +2,7 @@
 x:      .asciiz "Enter your number here: "
 y:      .asciiz "Your answer is: "
 z:      .asciiz "The number entered is lesser than 0. "
+q:      .asciiz " Overflow: "
 v:      .asciiz "\n"
         .text
         .globl main
@@ -16,7 +17,9 @@ main:
 
     move        $t0, $v0
 
-    beq         $t0, 0, error
+    slt		    $t3, $t0, 0
+
+    beq         $t3, 1, error
     li          $t1, 1
 
 loop:
@@ -36,9 +39,17 @@ done:
     li          $v0, 1
     syscall
 
-    li         $v0, 4
-    la         $a0, v
-    syscall         
+    li          $v0, 4
+    la          $a0, q
+    syscall
+
+    move        $a0, $t2
+    li          $v0, 1
+    syscall
+
+    li          $v0, 4
+    la          $a0, v
+    syscall       
 
     j           main
 
@@ -53,6 +64,8 @@ error:
 
      j          main
     
+overflow:
+     
 
             
 
