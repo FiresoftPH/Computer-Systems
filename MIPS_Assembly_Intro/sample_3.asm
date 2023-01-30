@@ -11,6 +11,11 @@ main:
     lw		$t0, n	
     lw      $t1, m
     addu    $t2, $t0, $t1
-    sw		$t2, r	
+
+    sw		$t2, r
+
     lw      $t3, q
+    syscall
+
+    li      $v0, 10
     syscall
