@@ -18,7 +18,7 @@ main:
 
     move        $t0, $v0
 
-    slt		    $t3, $t0, 0
+    slt		    $t3, $t0, 1
     beq         $t3, 1, error
 
     # From testing, the factorial of number greater than 12 exceeds the 32 bit unsigned integer limit.

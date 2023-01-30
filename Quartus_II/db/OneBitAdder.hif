@@ -1,0 +1,63 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+11
+3700
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+OneBitAdder
+# storage
+db|OneBitAdder.(0).cnf
+db|OneBitAdder.(0).cnf
+# case_insensitive
+# source_file
+onebitadder.bdf
+c5f9635b6680c8f489e59cccdfde4caf
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+XOR3
+# storage
+db|OneBitAdder.(1).cnf
+db|OneBitAdder.(1).cnf
+# case_insensitive
+# source_file
+|altera|91sp2|quartus|libraries|others|maxplus2|xor3.bdf
+e4431ff48639c2a79904a4f46f37ca8
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+xor3:inst11
+}
+# macro_sequence
+
+# end
+# complete
+
