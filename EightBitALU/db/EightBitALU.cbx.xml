@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="EightBitALU">
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightBitALU|OneBitaALU:inst2|MUX:inst10|lpm_mux:$00001" CBX_FILE_NAME="mux_nmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightBitALU|OneBitaALU:inst2|MUX:inst9|lpm_mux:$00001" CBX_FILE_NAME="mux_lmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightBitALU|OneBitaALU:inst6|MUX:inst10|lpm_mux:$00001" CBX_FILE_NAME="mux_nmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightBitALU|OneBitaALU:inst6|MUX:inst9|lpm_mux:$00001" CBX_FILE_NAME="mux_lmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightBitALU|OneBitaALU:inst3|MUX:inst10|lpm_mux:$00001" CBX_FILE_NAME="mux_nmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightBitALU|OneBitaALU:inst3|MUX:inst9|lpm_mux:$00001" CBX_FILE_NAME="mux_lmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightBitALU|OneBitaALU:inst7|MUX:inst10|lpm_mux:$00001" CBX_FILE_NAME="mux_nmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightBitALU|OneBitaALU:inst7|MUX:inst9|lpm_mux:$00001" CBX_FILE_NAME="mux_lmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightBitALU|OneBitaALU:inst4|MUX:inst10|lpm_mux:$00001" CBX_FILE_NAME="mux_nmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightBitALU|OneBitaALU:inst4|MUX:inst9|lpm_mux:$00001" CBX_FILE_NAME="mux_lmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightBitALU|OneBitaALU:inst|MUX:inst10|lpm_mux:$00001" CBX_FILE_NAME="mux_nmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightBitALU|OneBitaALU:inst|MUX:inst9|lpm_mux:$00001" CBX_FILE_NAME="mux_lmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightBitALU|OneBitaALU:inst1|MUX:inst10|lpm_mux:$00001" CBX_FILE_NAME="mux_nmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightBitALU|OneBitaALU:inst1|MUX:inst9|lpm_mux:$00001" CBX_FILE_NAME="mux_lmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightBitALU|OneBitaALU:inst5|MUX:inst10|lpm_mux:$00001" CBX_FILE_NAME="mux_nmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightBitALU|OneBitaALU:inst5|MUX:inst9|lpm_mux:$00001" CBX_FILE_NAME="mux_lmc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

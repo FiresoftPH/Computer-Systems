@@ -1,0 +1,101 @@
+|FourBitAdder
+Cout <= OneBitAdder:inst3.Cout
+A[0] => OneBitAdder:inst.A
+A[1] => OneBitAdder:inst1.A
+A[2] => OneBitAdder:inst2.A
+A[3] => OneBitAdder:inst3.A
+B[0] => OneBitAdder:inst.B
+B[1] => OneBitAdder:inst1.B
+B[2] => OneBitAdder:inst2.B
+B[3] => OneBitAdder:inst3.B
+Cin => OneBitAdder:inst.Cin
+R[0] <= OneBitAdder:inst.R
+R[1] <= OneBitAdder:inst1.R
+R[2] <= OneBitAdder:inst2.R
+R[3] <= OneBitAdder:inst3.R
+
+
+|FourBitAdder|OneBitAdder:inst3
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst1.IN0
+A => inst.IN0
+A => XOR3:inst11.IN1
+Cin => inst1.IN1
+Cin => inst2.IN1
+Cin => XOR3:inst11.IN3
+B => inst2.IN0
+B => inst.IN1
+B => XOR3:inst11.IN2
+R <= XOR3:inst11.OUT
+
+
+|FourBitAdder|OneBitAdder:inst3|XOR3:inst11
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|FourBitAdder|OneBitAdder:inst2
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst1.IN0
+A => inst.IN0
+A => XOR3:inst11.IN1
+Cin => inst1.IN1
+Cin => inst2.IN1
+Cin => XOR3:inst11.IN3
+B => inst2.IN0
+B => inst.IN1
+B => XOR3:inst11.IN2
+R <= XOR3:inst11.OUT
+
+
+|FourBitAdder|OneBitAdder:inst2|XOR3:inst11
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|FourBitAdder|OneBitAdder:inst1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst1.IN0
+A => inst.IN0
+A => XOR3:inst11.IN1
+Cin => inst1.IN1
+Cin => inst2.IN1
+Cin => XOR3:inst11.IN3
+B => inst2.IN0
+B => inst.IN1
+B => XOR3:inst11.IN2
+R <= XOR3:inst11.OUT
+
+
+|FourBitAdder|OneBitAdder:inst1|XOR3:inst11
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|FourBitAdder|OneBitAdder:inst
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst1.IN0
+A => inst.IN0
+A => XOR3:inst11.IN1
+Cin => inst1.IN1
+Cin => inst2.IN1
+Cin => XOR3:inst11.IN3
+B => inst2.IN0
+B => inst.IN1
+B => XOR3:inst11.IN2
+R <= XOR3:inst11.OUT
+
+
+|FourBitAdder|OneBitAdder:inst|XOR3:inst11
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+

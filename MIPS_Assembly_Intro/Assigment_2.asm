@@ -18,8 +18,10 @@ main:
 
     move        $t0, $v0
 
-    slt		    $t3, $t0, 1
-    beq         $t3, 1, error
+    beq         $t0, 0, except
+
+    slt		    $t3, $t0, 0
+    beq         $t3, 1, error 
 
     # From testing, the factorial of number greater than 12 exceeds the 32 bit unsigned integer limit.
     sgt         $t3, $t0, 12
@@ -42,6 +44,22 @@ done:
     syscall
 
     move        $a0, $t1
+    li          $v0, 1
+    syscall
+
+    li          $v0, 4
+    la          $a0, v
+    syscall
+
+    j main
+
+except:
+    # Exiting the loop and shows the answer and ask for another input
+    li          $v0, 4
+    la          $a0, y
+    syscall
+
+    li          $a0, 1
     li          $v0, 1
     syscall
 

@@ -29,14 +29,15 @@ mainloop:
     li $t1,1
     li $t2,1
 
-    loop:
-        bgt $t2,$t0, done
-        mult $t1,$t2
-        mfhi $t1
-        mflo $t1
-        add $t2,$t2,1
-        j loop
-    done:
+loop:
+    bgt $t2,$t0, done
+    mult $t1,$t2
+    mfhi $t1
+    mflo $t1
+    add $t2,$t2,1
+    j loop
+
+done:
 
     li $v0,4
     la $a0,result
@@ -49,3 +50,5 @@ mainloop:
     li $v0,4
     la $a0,newline
     syscall
+
+    j mainloop

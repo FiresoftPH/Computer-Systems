@@ -1,0 +1,89 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+11
+3700
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+XOR3
+# storage
+db|FourBitAdder.(2).cnf
+db|FourBitAdder.(2).cnf
+# case_insensitive
+# source_file
+|altera|91sp2|quartus|libraries|others|maxplus2|xor3.bdf
+e4431ff48639c2a79904a4f46f37ca8
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+onebitadder:inst3|xor3:inst11
+onebitadder:inst2|xor3:inst11
+onebitadder:inst1|xor3:inst11
+onebitadder:inst|xor3:inst11
+}
+# macro_sequence
+
+# end
+# entity
+FourBitAdder
+# storage
+db|FourBitAdder.(0).cnf
+db|FourBitAdder.(0).cnf
+# case_insensitive
+# source_file
+fourbitadder.bdf
+12c930b9ed9b47d37b82d632465b58f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+OneBitAdder
+# storage
+db|FourBitAdder.(1).cnf
+db|FourBitAdder.(1).cnf
+# case_insensitive
+# source_file
+onebitadder.bdf
+d2f71b6ae8b933eda9b7a5495d2456
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+onebitadder:inst3
+onebitadder:inst2
+onebitadder:inst1
+onebitadder:inst
+}
+# macro_sequence
+
+# end
+# complete
+

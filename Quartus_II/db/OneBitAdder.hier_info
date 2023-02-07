@@ -1,9 +1,13 @@
 |OneBitAdder
-Cout <= <GND>
+Cout <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+A => XOR3:inst11.IN1
+B => inst.IN1
+B => inst2.IN0
+B => XOR3:inst11.IN2
 R <= XOR3:inst11.OUT
 Cin => XOR3:inst11.IN3
-A => XOR3:inst11.IN1
-B => XOR3:inst11.IN2
 
 
 |OneBitAdder|XOR3:inst11
