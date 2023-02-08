@@ -20,13 +20,13 @@ Altera or its authorized distributors.  Please refer to the
 applicable agreement for further details.
 */
 
-VECTOR("C:/Users/Firesoft/Documents/Computing/Computer-Systems/EightBitALU/db/EightBitALU.sim.cvwf")
+VECTOR("C:/Users/Firesoft/Documents/Computing/Computer-Systems/EightBitALU/EightBitALU.vwf")
 {
 	ZOOM{
-		ZBEGIN = 40181;
-		ZEND = 55029;
-		NUMERATOR = 705;
-		DENOMINATOR = 14848;
+		ZBEGIN = 0;
+		ZEND = 240000;
+		NUMERATOR = 887;
+		DENOMINATOR = 240000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -35,7 +35,8 @@ VECTOR("C:/Users/Firesoft/Documents/Computing/Computer-Systems/EightBitALU/db/Ei
 		DUTY_CYCLE = 50;
 	}
 	RANDOM_VALUE{
-		INTERVAL_TYPE = HALF_GRID;
+		INTERVAL_TYPE = USER;
+		USER_INTERVAL = 40000;
 	}
 	LINE{
 		SIGNAL = "A";
@@ -303,12 +304,12 @@ VECTOR("C:/Users/Firesoft/Documents/Computing/Computer-Systems/EightBitALU/db/Ei
 	}
 }
 
-VECTOR("C:/Users/Firesoft/Documents/Computing/Computer-Systems/EightBitALU/EightBitALU.vwf")
+VECTOR("C:/Users/Firesoft/Documents/Computing/Computer-Systems/EightBitALU/db/EightBitALU.sim.cvwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
 		ZEND = 240000;
-		NUMERATOR = 887;
+		NUMERATOR = 705;
 		DENOMINATOR = 240000;
 		TOP_INDEX = 0;
 	}
@@ -318,8 +319,7 @@ VECTOR("C:/Users/Firesoft/Documents/Computing/Computer-Systems/EightBitALU/Eight
 		DUTY_CYCLE = 50;
 	}
 	RANDOM_VALUE{
-		INTERVAL_TYPE = USER;
-		USER_INTERVAL = 40000;
+		INTERVAL_TYPE = HALF_GRID;
 	}
 	LINE{
 		SIGNAL = "A";
