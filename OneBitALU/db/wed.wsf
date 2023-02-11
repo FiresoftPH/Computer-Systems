@@ -207,7 +207,7 @@ VECTOR("C:/Users/Firesoft/Documents/Computing/Computer-Systems/OneBitALU/db/OneB
 	ZOOM{
 		ZBEGIN = 0;
 		ZEND = 240000;
-		NUMERATOR = 705;
+		NUMERATOR = 711;
 		DENOMINATOR = 240000;
 		TOP_INDEX = 0;
 	}

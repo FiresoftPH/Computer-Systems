@@ -35,8 +35,7 @@ VECTOR("C:/Users/Firesoft/Documents/Computing/Computer-Systems/EightBitALU/Eight
 		DUTY_CYCLE = 50;
 	}
 	RANDOM_VALUE{
-		INTERVAL_TYPE = USER;
-		USER_INTERVAL = 40000;
+		INTERVAL_TYPE = GRID;
 	}
 	LINE{
 		SIGNAL = "A";
@@ -309,7 +308,7 @@ VECTOR("C:/Users/Firesoft/Documents/Computing/Computer-Systems/EightBitALU/db/Ei
 	ZOOM{
 		ZBEGIN = 0;
 		ZEND = 240000;
-		NUMERATOR = 705;
+		NUMERATOR = 711;
 		DENOMINATOR = 240000;
 		TOP_INDEX = 0;
 	}

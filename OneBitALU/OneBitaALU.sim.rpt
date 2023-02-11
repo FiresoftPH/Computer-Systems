@@ -1,5 +1,5 @@
 Simulator report for OneBitaALU
-Tue Feb 07 16:21:12 2023
+Sat Feb 11 23:56:56 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -168,7 +168,7 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Feb 07 16:21:12 2023
+    Info: Processing started: Sat Feb 11 23:56:56 2023
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off OneBitaALU -c OneBitaALU
 Info: Using vector source file "C:/Users/Firesoft/Documents/Computing/Computer-Systems/OneBitALU/OneBitaALU.vwf"
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
@@ -178,7 +178,7 @@ Info: Simulation coverage is      92.00 %
 Info: Number of transitions in simulation is 332
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 154 megabytes
-    Info: Processing ended: Tue Feb 07 16:21:12 2023
+    Info: Processing ended: Sat Feb 11 23:56:56 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
