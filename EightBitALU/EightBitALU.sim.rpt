@@ -1,5 +1,5 @@
 Simulator report for EightBitALU
-Sat Feb 11 22:58:37 2023
+Thu Feb 16 21:49:39 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -46,8 +46,8 @@ applicable agreement for further details.
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 240.0 ns     ;
 ; Simulation Netlist Size     ; 165 nodes    ;
-; Simulation Coverage         ;      86.67 % ;
-; Total Number of Transitions ; 2794         ;
+; Simulation Coverage         ;      87.88 % ;
+; Total Number of Transitions ; 2869         ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 +-----------------------------+--------------+
@@ -94,13 +94,13 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      86.67 % ;
+; Total coverage as a percentage                      ;      87.88 % ;
 ; Total nodes checked                                 ; 165          ;
 ; Total output ports checked                          ; 165          ;
-; Total output ports with complete 1/0-value coverage ; 143          ;
-; Total output ports with no 1/0-value coverage       ; 21           ;
-; Total output ports with no 1-value coverage         ; 21           ;
-; Total output ports with no 0-value coverage         ; 22           ;
+; Total output ports with complete 1/0-value coverage ; 145          ;
+; Total output ports with no 1/0-value coverage       ; 18           ;
+; Total output ports with no 1-value coverage         ; 18           ;
+; Total output ports with no 0-value coverage         ; 20           ;
 +-----------------------------------------------------+--------------+
 
 
@@ -145,6 +145,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |eightbitalu|OneBitaALU:inst|mux:inst9|lpm_mux:$00001|mux_lmc:auto_generated|result_node[0]~1  ; |eightbitalu|OneBitaALU:inst|mux:inst9|lpm_mux:$00001|mux_lmc:auto_generated|result_node[0]~1  ; out0             ;
 ; |eightbitalu|OneBitaALU:inst|mux:inst9|lpm_mux:$00001|mux_lmc:auto_generated|result_node[0]    ; |eightbitalu|OneBitaALU:inst|mux:inst9|lpm_mux:$00001|mux_lmc:auto_generated|result_node[0]    ; out0             ;
 ; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|inst4                                           ; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|inst4                                           ; out0             ;
+; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|inst1                                           ; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|inst1                                           ; out0             ;
+; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|inst2                                           ; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|inst2                                           ; out0             ;
 ; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|inst                                            ; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|inst                                            ; out0             ;
 ; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|xor3:inst11|1                                   ; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|xor3:inst11|1                                   ; out0             ;
 ; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|xor3:inst11|3                                   ; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|xor3:inst11|3                                   ; out0             ;
@@ -262,13 +264,10 @@ The following table displays output ports that do not toggle to 1 during simulat
 +-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
 ; Node Name                                                                                       ; Output Port Name                                                                                ; Output Port Type ;
 +-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
-; |eightbitalu|Cin                                                                                ; |eightbitalu|Cin                                                                                ; out              ;
 ; |eightbitalu|OP[1]                                                                              ; |eightbitalu|OP[1]                                                                              ; out              ;
 ; |eightbitalu|OP[0]                                                                              ; |eightbitalu|OP[0]                                                                              ; out              ;
 ; |eightbitalu|OneBitaALU:inst|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|data1_wire[0]     ; |eightbitalu|OneBitaALU:inst|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|data1_wire[0]     ; out0             ;
 ; |eightbitalu|OneBitaALU:inst|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|result_node[0]~0  ; |eightbitalu|OneBitaALU:inst|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|result_node[0]~0  ; out0             ;
-; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|inst1                                            ; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|inst1                                            ; out0             ;
-; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|inst2                                            ; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|inst2                                            ; out0             ;
 ; |eightbitalu|OneBitaALU:inst2|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|data1_wire[0]    ; |eightbitalu|OneBitaALU:inst2|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|data1_wire[0]    ; out0             ;
 ; |eightbitalu|OneBitaALU:inst2|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|result_node[0]~0 ; |eightbitalu|OneBitaALU:inst2|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|result_node[0]~0 ; out0             ;
 ; |eightbitalu|OneBitaALU:inst4|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|data1_wire[0]    ; |eightbitalu|OneBitaALU:inst4|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|data1_wire[0]    ; out0             ;
@@ -298,8 +297,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |eightbitalu|OP[0]                                                                              ; |eightbitalu|OP[0]                                                                              ; out              ;
 ; |eightbitalu|OneBitaALU:inst|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|data1_wire[0]     ; |eightbitalu|OneBitaALU:inst|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|data1_wire[0]     ; out0             ;
 ; |eightbitalu|OneBitaALU:inst|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|result_node[0]~0  ; |eightbitalu|OneBitaALU:inst|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|result_node[0]~0  ; out0             ;
-; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|inst1                                            ; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|inst1                                            ; out0             ;
-; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|inst2                                            ; |eightbitalu|OneBitaALU:inst|OneBitAdder:inst2|inst2                                            ; out0             ;
 ; |eightbitalu|OneBitaALU:inst2|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|data1_wire[0]    ; |eightbitalu|OneBitaALU:inst2|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|data1_wire[0]    ; out0             ;
 ; |eightbitalu|OneBitaALU:inst2|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|result_node[0]~0 ; |eightbitalu|OneBitaALU:inst2|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|result_node[0]~0 ; out0             ;
 ; |eightbitalu|OneBitaALU:inst4|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|data1_wire[0]    ; |eightbitalu|OneBitaALU:inst4|mux:inst10|lpm_mux:$00001|mux_nmc:auto_generated|data1_wire[0]    ; out0             ;
@@ -330,17 +327,17 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sat Feb 11 22:58:37 2023
+    Info: Processing started: Thu Feb 16 21:49:39 2023
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off EightBitALU -c EightBitALU
 Info: Using vector source file "C:/Users/Firesoft/Documents/Computing/Computer-Systems/EightBitALU/EightBitALU.vwf"
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      86.67 %
-Info: Number of transitions in simulation is 2794
+Info: Simulation coverage is      87.88 %
+Info: Number of transitions in simulation is 2869
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 155 megabytes
-    Info: Processing ended: Sat Feb 11 22:58:37 2023
+    Info: Processing ended: Thu Feb 16 21:49:39 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
