@@ -1,0 +1,14 @@
+|MultiCycleCPU
+OA <= <GND>
+OB <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst15.CLK
+clock => inst14.CLK
+clock => inst16.CLK
+T => inst.IN0
+T => inst8.IN0
+T => inst4.IN0
+T => inst11.IN0
+start => inst6.IN2
+OC <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+
+

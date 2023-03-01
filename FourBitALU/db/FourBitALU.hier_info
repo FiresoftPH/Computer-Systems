@@ -1,0 +1,398 @@
+|FourBitALU
+Cout <= OneBitaALU:inst3.Cout
+A[0] => OneBitaALU:inst.A
+A[1] => OneBitaALU:inst1.A
+A[2] => OneBitaALU:inst2.A
+A[3] => OneBitaALU:inst3.A
+Binvert => OneBitaALU:inst3.Binvert
+Binvert => OneBitaALU:inst.Binvert
+Binvert => OneBitaALU:inst1.Binvert
+Binvert => OneBitaALU:inst2.Binvert
+Cin => OneBitaALU:inst3.Cin
+Cin => OneBitaALU:inst.Cin
+B[0] => OneBitaALU:inst.B
+B[1] => OneBitaALU:inst1.B
+B[2] => OneBitaALU:inst2.B
+B[3] => OneBitaALU:inst3.B
+OP[0] => OneBitaALU:inst3.OP[0]
+OP[0] => OneBitaALU:inst.OP[0]
+OP[0] => OneBitaALU:inst1.OP[0]
+OP[0] => OneBitaALU:inst2.OP[0]
+OP[1] => OneBitaALU:inst3.OP[1]
+OP[1] => OneBitaALU:inst.OP[1]
+OP[1] => OneBitaALU:inst1.OP[1]
+OP[1] => OneBitaALU:inst2.OP[1]
+R[0] <= OneBitaALU:inst.R
+R[1] <= OneBitaALU:inst1.R
+R[2] <= OneBitaALU:inst2.R
+R[3] <= OneBitaALU:inst3.R
+
+
+|FourBitALU|OneBitaALU:inst3
+Cout <= OneBitAdder:inst2.Cout
+A => OneBitAdder:inst2.A
+A => inst1.IN1
+A => inst.IN0
+B => inst11.IN0
+B => MUX:inst9.data[0]
+Binvert => MUX:inst9.sel[0]
+Cin => OneBitAdder:inst2.Cin
+R <= MUX:inst10.result
+OP[0] => MUX:inst10.sel[0]
+OP[1] => MUX:inst10.sel[1]
+
+
+|FourBitALU|OneBitaALU:inst3|OneBitAdder:inst2
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst1.IN0
+A => inst.IN0
+A => XOR3:inst11.IN1
+Cin => inst1.IN1
+Cin => inst2.IN1
+Cin => XOR3:inst11.IN3
+B => inst2.IN0
+B => inst.IN1
+B => XOR3:inst11.IN2
+R <= XOR3:inst11.OUT
+
+
+|FourBitALU|OneBitaALU:inst3|OneBitAdder:inst2|XOR3:inst11
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|FourBitALU|OneBitaALU:inst3|MUX:inst9
+data[0] => lpm_mux:$00001.data[0][0]
+data[1] => lpm_mux:$00001.data[1][0]
+sel[0] => lpm_mux:$00001.sel[0]
+result <= lpm_mux:$00001.result[0]
+
+
+|FourBitALU|OneBitaALU:inst3|MUX:inst9|lpm_mux:$00001
+data[0][0] => mux_lmc:auto_generated.data[0]
+data[1][0] => mux_lmc:auto_generated.data[1]
+sel[0] => mux_lmc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_lmc:auto_generated.result[0]
+
+
+|FourBitALU|OneBitaALU:inst3|MUX:inst9|lpm_mux:$00001|mux_lmc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|FourBitALU|OneBitaALU:inst3|MUX:inst10
+data[0] => lpm_mux:$00001.data[0][0]
+data[1] => lpm_mux:$00001.data[1][0]
+data[2] => lpm_mux:$00001.data[2][0]
+sel[0] => lpm_mux:$00001.sel[0]
+sel[1] => lpm_mux:$00001.sel[1]
+result <= lpm_mux:$00001.result[0]
+
+
+|FourBitALU|OneBitaALU:inst3|MUX:inst10|lpm_mux:$00001
+data[0][0] => mux_nmc:auto_generated.data[0]
+data[1][0] => mux_nmc:auto_generated.data[1]
+data[2][0] => mux_nmc:auto_generated.data[2]
+sel[0] => mux_nmc:auto_generated.sel[0]
+sel[1] => mux_nmc:auto_generated.sel[1]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_nmc:auto_generated.result[0]
+
+
+|FourBitALU|OneBitaALU:inst3|MUX:inst10|lpm_mux:$00001|mux_nmc:auto_generated
+data[0] => data0_wire[0].IN0
+data[1] => data1_wire[0].IN0
+data[2] => data2_wire[0].IN0
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => data0_wire[0].IN0
+sel[0] => data1_wire[0].IN1
+sel[1] => data2_wire[0].IN1
+sel[1] => _.IN0
+
+
+|FourBitALU|OneBitaALU:inst
+Cout <= OneBitAdder:inst2.Cout
+A => OneBitAdder:inst2.A
+A => inst1.IN1
+A => inst.IN0
+B => inst11.IN0
+B => MUX:inst9.data[0]
+Binvert => MUX:inst9.sel[0]
+Cin => OneBitAdder:inst2.Cin
+R <= MUX:inst10.result
+OP[0] => MUX:inst10.sel[0]
+OP[1] => MUX:inst10.sel[1]
+
+
+|FourBitALU|OneBitaALU:inst|OneBitAdder:inst2
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst1.IN0
+A => inst.IN0
+A => XOR3:inst11.IN1
+Cin => inst1.IN1
+Cin => inst2.IN1
+Cin => XOR3:inst11.IN3
+B => inst2.IN0
+B => inst.IN1
+B => XOR3:inst11.IN2
+R <= XOR3:inst11.OUT
+
+
+|FourBitALU|OneBitaALU:inst|OneBitAdder:inst2|XOR3:inst11
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|FourBitALU|OneBitaALU:inst|MUX:inst9
+data[0] => lpm_mux:$00001.data[0][0]
+data[1] => lpm_mux:$00001.data[1][0]
+sel[0] => lpm_mux:$00001.sel[0]
+result <= lpm_mux:$00001.result[0]
+
+
+|FourBitALU|OneBitaALU:inst|MUX:inst9|lpm_mux:$00001
+data[0][0] => mux_lmc:auto_generated.data[0]
+data[1][0] => mux_lmc:auto_generated.data[1]
+sel[0] => mux_lmc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_lmc:auto_generated.result[0]
+
+
+|FourBitALU|OneBitaALU:inst|MUX:inst9|lpm_mux:$00001|mux_lmc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|FourBitALU|OneBitaALU:inst|MUX:inst10
+data[0] => lpm_mux:$00001.data[0][0]
+data[1] => lpm_mux:$00001.data[1][0]
+data[2] => lpm_mux:$00001.data[2][0]
+sel[0] => lpm_mux:$00001.sel[0]
+sel[1] => lpm_mux:$00001.sel[1]
+result <= lpm_mux:$00001.result[0]
+
+
+|FourBitALU|OneBitaALU:inst|MUX:inst10|lpm_mux:$00001
+data[0][0] => mux_nmc:auto_generated.data[0]
+data[1][0] => mux_nmc:auto_generated.data[1]
+data[2][0] => mux_nmc:auto_generated.data[2]
+sel[0] => mux_nmc:auto_generated.sel[0]
+sel[1] => mux_nmc:auto_generated.sel[1]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_nmc:auto_generated.result[0]
+
+
+|FourBitALU|OneBitaALU:inst|MUX:inst10|lpm_mux:$00001|mux_nmc:auto_generated
+data[0] => data0_wire[0].IN0
+data[1] => data1_wire[0].IN0
+data[2] => data2_wire[0].IN0
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => data0_wire[0].IN0
+sel[0] => data1_wire[0].IN1
+sel[1] => data2_wire[0].IN1
+sel[1] => _.IN0
+
+
+|FourBitALU|OneBitaALU:inst1
+Cout <= OneBitAdder:inst2.Cout
+A => OneBitAdder:inst2.A
+A => inst1.IN1
+A => inst.IN0
+B => inst11.IN0
+B => MUX:inst9.data[0]
+Binvert => MUX:inst9.sel[0]
+Cin => OneBitAdder:inst2.Cin
+R <= MUX:inst10.result
+OP[0] => MUX:inst10.sel[0]
+OP[1] => MUX:inst10.sel[1]
+
+
+|FourBitALU|OneBitaALU:inst1|OneBitAdder:inst2
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst1.IN0
+A => inst.IN0
+A => XOR3:inst11.IN1
+Cin => inst1.IN1
+Cin => inst2.IN1
+Cin => XOR3:inst11.IN3
+B => inst2.IN0
+B => inst.IN1
+B => XOR3:inst11.IN2
+R <= XOR3:inst11.OUT
+
+
+|FourBitALU|OneBitaALU:inst1|OneBitAdder:inst2|XOR3:inst11
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|FourBitALU|OneBitaALU:inst1|MUX:inst9
+data[0] => lpm_mux:$00001.data[0][0]
+data[1] => lpm_mux:$00001.data[1][0]
+sel[0] => lpm_mux:$00001.sel[0]
+result <= lpm_mux:$00001.result[0]
+
+
+|FourBitALU|OneBitaALU:inst1|MUX:inst9|lpm_mux:$00001
+data[0][0] => mux_lmc:auto_generated.data[0]
+data[1][0] => mux_lmc:auto_generated.data[1]
+sel[0] => mux_lmc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_lmc:auto_generated.result[0]
+
+
+|FourBitALU|OneBitaALU:inst1|MUX:inst9|lpm_mux:$00001|mux_lmc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|FourBitALU|OneBitaALU:inst1|MUX:inst10
+data[0] => lpm_mux:$00001.data[0][0]
+data[1] => lpm_mux:$00001.data[1][0]
+data[2] => lpm_mux:$00001.data[2][0]
+sel[0] => lpm_mux:$00001.sel[0]
+sel[1] => lpm_mux:$00001.sel[1]
+result <= lpm_mux:$00001.result[0]
+
+
+|FourBitALU|OneBitaALU:inst1|MUX:inst10|lpm_mux:$00001
+data[0][0] => mux_nmc:auto_generated.data[0]
+data[1][0] => mux_nmc:auto_generated.data[1]
+data[2][0] => mux_nmc:auto_generated.data[2]
+sel[0] => mux_nmc:auto_generated.sel[0]
+sel[1] => mux_nmc:auto_generated.sel[1]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_nmc:auto_generated.result[0]
+
+
+|FourBitALU|OneBitaALU:inst1|MUX:inst10|lpm_mux:$00001|mux_nmc:auto_generated
+data[0] => data0_wire[0].IN0
+data[1] => data1_wire[0].IN0
+data[2] => data2_wire[0].IN0
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => data0_wire[0].IN0
+sel[0] => data1_wire[0].IN1
+sel[1] => data2_wire[0].IN1
+sel[1] => _.IN0
+
+
+|FourBitALU|OneBitaALU:inst2
+Cout <= OneBitAdder:inst2.Cout
+A => OneBitAdder:inst2.A
+A => inst1.IN1
+A => inst.IN0
+B => inst11.IN0
+B => MUX:inst9.data[0]
+Binvert => MUX:inst9.sel[0]
+Cin => OneBitAdder:inst2.Cin
+R <= MUX:inst10.result
+OP[0] => MUX:inst10.sel[0]
+OP[1] => MUX:inst10.sel[1]
+
+
+|FourBitALU|OneBitaALU:inst2|OneBitAdder:inst2
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst1.IN0
+A => inst.IN0
+A => XOR3:inst11.IN1
+Cin => inst1.IN1
+Cin => inst2.IN1
+Cin => XOR3:inst11.IN3
+B => inst2.IN0
+B => inst.IN1
+B => XOR3:inst11.IN2
+R <= XOR3:inst11.OUT
+
+
+|FourBitALU|OneBitaALU:inst2|OneBitAdder:inst2|XOR3:inst11
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|FourBitALU|OneBitaALU:inst2|MUX:inst9
+data[0] => lpm_mux:$00001.data[0][0]
+data[1] => lpm_mux:$00001.data[1][0]
+sel[0] => lpm_mux:$00001.sel[0]
+result <= lpm_mux:$00001.result[0]
+
+
+|FourBitALU|OneBitaALU:inst2|MUX:inst9|lpm_mux:$00001
+data[0][0] => mux_lmc:auto_generated.data[0]
+data[1][0] => mux_lmc:auto_generated.data[1]
+sel[0] => mux_lmc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_lmc:auto_generated.result[0]
+
+
+|FourBitALU|OneBitaALU:inst2|MUX:inst9|lpm_mux:$00001|mux_lmc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[0].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|FourBitALU|OneBitaALU:inst2|MUX:inst10
+data[0] => lpm_mux:$00001.data[0][0]
+data[1] => lpm_mux:$00001.data[1][0]
+data[2] => lpm_mux:$00001.data[2][0]
+sel[0] => lpm_mux:$00001.sel[0]
+sel[1] => lpm_mux:$00001.sel[1]
+result <= lpm_mux:$00001.result[0]
+
+
+|FourBitALU|OneBitaALU:inst2|MUX:inst10|lpm_mux:$00001
+data[0][0] => mux_nmc:auto_generated.data[0]
+data[1][0] => mux_nmc:auto_generated.data[1]
+data[2][0] => mux_nmc:auto_generated.data[2]
+sel[0] => mux_nmc:auto_generated.sel[0]
+sel[1] => mux_nmc:auto_generated.sel[1]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_nmc:auto_generated.result[0]
+
+
+|FourBitALU|OneBitaALU:inst2|MUX:inst10|lpm_mux:$00001|mux_nmc:auto_generated
+data[0] => data0_wire[0].IN0
+data[1] => data1_wire[0].IN0
+data[2] => data2_wire[0].IN0
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => data0_wire[0].IN0
+sel[0] => data1_wire[0].IN1
+sel[1] => data2_wire[0].IN1
+sel[1] => _.IN0
+
+
